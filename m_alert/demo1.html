@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>alert-demo1</title>
+    <link rel="stylesheet" href="./css/m_alert.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<body style="min-height:500px;width:100%;">
+    <div class="m_alert">
+        <img id="closeBtn" class="closeBtn" src="./images/close.png" alt="">
+        <p>Loading...</p>
+    </div>
+    <button type="button" id="warning">warning</button>
+    <button type="button" id="success">success</button>
+    <button type="button" id="hint">hint</button>
+    <button type="button" id="error">error</button>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/m_alert.js"></script>
+    <script>
+        $(function() {
+            $("#warning").mAlert({
+                "theme": "warning",
+                "content": "警告！",
+                "closeTimes": 2000
+            });
+            $("#success").mAlert({
+                "theme": "success",
+                "content": "成功！",
+                "closeTimes": 2000
+            });
+            $("#hint").mAlert({
+                "theme": "hint",
+                "content": "提示！",
+                "closeTimes": 2000
+            });
+            $("#error").mAlert({
+                "theme": "error",
+                "content": "错误！",
+                "closeTimes": 2000
+            });
+            $(window).resize(function() {
+                    $("#tanchu").mAlert({});
+                })
+                // $("#tanchu").on('click', function() {
+                //     $(".m_alert").css({
+                //         "transition": "top 0.5s, opacity 0.5s",
+                //         "top": "40px",
+                //         "opacity": "1"
+                //     });
+                //     // setTimeout(function() {
+                //     //     $(".m_alert").css({
+                //     //         "transition": "top 0.5s, opacity 0.5s",
+                //     //         "top": "20px",
+                //     //         "opacity": "0"
+                //     //     })
+                //     // }, 2000)
+                //     $("#tanchu").mAlert({});
+                // });
+                // $("#closeBtn").on('click', function() {
+                //     $(".m_alert").css({
+                //         "transition": "top 0.5s, opacity 0.5s",
+                //         "top": "20px",
+                //         "opacity": "0"
+                //     })
+                // })
+
+            // $("#tanchu").mAlert({
+            //     "zIndex": 110,
+            //     "theme": "success", //成功success 警告warning 错误error 提示hint
+            //     "content": "mes.error",
+            //     "close": true, //是否含有关闭按钮
+            //     "top": "20px",
+            //     "transitionTop": "40px"
+            // });
+        })
+    </script>
+</body>
+
+</html>
